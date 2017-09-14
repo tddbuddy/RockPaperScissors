@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Kata.Prod;
+using NUnit.Framework;
 
 namespace Kata
 {

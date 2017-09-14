@@ -1,4 +1,4 @@
-namespace Kata
+namespace Kata.Prod
 {
     public class RockPaperScissors
     {
