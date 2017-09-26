@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace Kata
 {
     [TestFixture]
-    public class GameFeatureTests
+    public class GameEngineTests
     {
         [TestFixture]
         public class BasicRules
@@ -22,7 +22,7 @@ namespace Kata
                         var expected = GameResult.Loose;
                         var player = GameInstrument.Scissors;
                         var opponent = GameInstrument.Rock;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -36,7 +36,7 @@ namespace Kata
                         var expected = GameResult.Win;
                         var player = GameInstrument.Scissors;
                         var opponent = GameInstrument.Paper;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -50,7 +50,7 @@ namespace Kata
                         var expected = GameResult.Draw;
                         var player = GameInstrument.Scissors;
                         var opponent = GameInstrument.Scissors;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -68,7 +68,7 @@ namespace Kata
                         var expected = GameResult.Loose;
                         var player = GameInstrument.Paper;
                         var opponent = GameInstrument.Scissors;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -82,7 +82,7 @@ namespace Kata
                         var expected = GameResult.Win;
                         var player = GameInstrument.Paper;
                         var opponent = GameInstrument.Rock;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -96,7 +96,7 @@ namespace Kata
                         var expected = GameResult.Draw;
                         var player = GameInstrument.Scissors;
                         var opponent = GameInstrument.Scissors;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -115,7 +115,7 @@ namespace Kata
                         var expected = GameResult.Loose;
                         var player = GameInstrument.Rock;
                         var opponent = GameInstrument.Paper;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -129,7 +129,7 @@ namespace Kata
                         var expected = GameResult.Win;
                         var player = GameInstrument.Rock;
                         var opponent = GameInstrument.Scissors;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert
@@ -143,7 +143,7 @@ namespace Kata
                         var expected = GameResult.Draw;
                         var player = GameInstrument.Rock;
                         var opponent = GameInstrument.Rock;
-                        var game = new RockPaperScissors();
+                        var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
                         // Assert

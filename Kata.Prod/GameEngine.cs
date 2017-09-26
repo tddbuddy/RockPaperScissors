@@ -1,6 +1,6 @@
 namespace Kata.Prod
 {
-    public class RockPaperScissors
+    public class GameEngine
     {
         public GameResult Play(GameInstrument player, GameInstrument opponent)
         {

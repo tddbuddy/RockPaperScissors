@@ -43,7 +43,7 @@
     <Compile Include="GameInstrument.cs" />
     <Compile Include="GameResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RockPaperScissors.cs" />
+    <Compile Include="GameEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
