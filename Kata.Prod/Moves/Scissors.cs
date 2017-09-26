@@ -1,6 +1,4 @@
-﻿using Kata.Domain;
-
-namespace Kata.Prod.Moves
+﻿namespace Kata.Prod.Moves
 {
     public class Scissors : IGameMove
     {
