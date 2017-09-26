@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GameResult.cs" />
+    <Compile Include="Moves\IGameMove.cs" />
     <Compile Include="Moves\Paper.cs" />
     <Compile Include="Moves\Scissors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

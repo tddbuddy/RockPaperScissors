@@ -1,4 +1,4 @@
-﻿namespace Kata.Domain
+﻿namespace Kata.Prod.Moves
 {
     public interface IGameMove
     {
