@@ -22,14 +22,18 @@ namespace Kata.Prod
 
         private bool PlayerDraws(IGameMove player, IGameMove opponent)
         {
+            return AreGameMoveSameType(player, opponent);
+        }
+
+        private static bool AreGameMoveSameType(IGameMove player, IGameMove opponent)
+        {
             return player.GetType() == opponent.GetType();
         }
 
         private bool PlayerWins(IGameMove player, IGameMove opponent)
         {
             var playerWinsIfOpponentIs = player.Beats();
-
-            return playerWinsIfOpponentIs.GetType() == opponent.GetType();
+            return AreGameMoveSameType(playerWinsIfOpponentIs, opponent);
         }
     }
 }
