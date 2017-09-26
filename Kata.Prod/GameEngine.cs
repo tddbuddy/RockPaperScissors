@@ -1,15 +1,18 @@
+using Kata.Domain;
+
 namespace Kata.Prod
 {
     public class GameEngine
     {
-        public GameResult Play(GameInstrument player, GameInstrument opponent)
+        public GameResult Play(IGameMove player, IGameMove opponent)
         {
-            if (IsWinningMove(player, opponent))
+           
+            if (PlayerWins(player, opponent))
             {
                 return GameResult.Win;
             }
 
-            if (IsDraw(player, opponent))
+            if (PlayerDraws(player, opponent))
             {
                 return GameResult.Draw;
             }
@@ -17,31 +20,16 @@ namespace Kata.Prod
             return GameResult.Loose;
         }
 
-        private bool IsWinningMove(GameInstrument player, GameInstrument opponent)
+        private bool PlayerDraws(IGameMove player, IGameMove opponent)
         {
-            return ScissorsBeatsPaper(player, opponent) 
-                   || PaperBeatRock(player, opponent)
-                   || RockBeatScissors(player, opponent);
+            return player.GetType() == opponent.GetType();
         }
 
-        private bool RockBeatScissors(GameInstrument player, GameInstrument opponent)
+        private bool PlayerWins(IGameMove player, IGameMove opponent)
         {
-            return player == GameInstrument.Rock && opponent == GameInstrument.Scissors;
-        }
+            var playerWinsIfOpponentIs = player.Beats();
 
-        private bool ScissorsBeatsPaper(GameInstrument player, GameInstrument opponent)
-        {
-            return player == GameInstrument.Scissors && opponent == GameInstrument.Paper;
-        }
-
-        private bool PaperBeatRock(GameInstrument player, GameInstrument opponent)
-        {
-            return player == GameInstrument.Paper && opponent == GameInstrument.Rock;
-        }
-
-        private bool IsDraw(GameInstrument player, GameInstrument opponent)
-        {
-            return player.CompareTo(opponent) == 0;
+            return playerWinsIfOpponentIs.GetType() == opponent.GetType();
         }
     }
 }

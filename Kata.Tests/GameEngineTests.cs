@@ -1,4 +1,5 @@
 ﻿using Kata.Prod;
+using Kata.Prod.Moves;
 using NUnit.Framework;
 
 namespace Kata
@@ -20,8 +21,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Loose;
-                        var player = GameInstrument.Scissors;
-                        var opponent = GameInstrument.Rock;
+                        var player = new Scissors();
+                        var opponent = new Rock();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -34,8 +35,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Win;
-                        var player = GameInstrument.Scissors;
-                        var opponent = GameInstrument.Paper;
+                        var player = new Scissors();
+                        var opponent = new Paper();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -48,8 +49,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Draw;
-                        var player = GameInstrument.Scissors;
-                        var opponent = GameInstrument.Scissors;
+                        var player = new Scissors();
+                        var opponent = new Scissors();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -66,8 +67,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Loose;
-                        var player = GameInstrument.Paper;
-                        var opponent = GameInstrument.Scissors;
+                        var player = new Paper();
+                        var opponent = new Scissors();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -80,8 +81,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Win;
-                        var player = GameInstrument.Paper;
-                        var opponent = GameInstrument.Rock;
+                        var player = new Paper();
+                        var opponent = new Rock();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -94,8 +95,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Draw;
-                        var player = GameInstrument.Scissors;
-                        var opponent = GameInstrument.Scissors;
+                        var player = new Paper();
+                        var opponent = new Paper();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -113,8 +114,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Loose;
-                        var player = GameInstrument.Rock;
-                        var opponent = GameInstrument.Paper;
+                        var player = new Rock();
+                        var opponent = new Paper();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -127,8 +128,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Win;
-                        var player = GameInstrument.Rock;
-                        var opponent = GameInstrument.Scissors;
+                        var player = new Rock();
+                        var opponent = new Scissors();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);
@@ -141,8 +142,8 @@ namespace Kata
                     {
                         // Arrange
                         var expected = GameResult.Draw;
-                        var player = GameInstrument.Rock;
-                        var opponent = GameInstrument.Rock;
+                        var player = new Rock();
+                        var opponent = new Rock();
                         var game = new GameEngine();
                         // Act
                         var actual = game.Play(player, opponent);

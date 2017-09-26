@@ -40,10 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameInstrument.cs" />
     <Compile Include="GameResult.cs" />
+    <Compile Include="Moves\Paper.cs" />
+    <Compile Include="Moves\Scissors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameEngine.cs" />
+    <Compile Include="Moves\Rock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kata.Domain\Kata.Domain.csproj">
+      <Project>{6beb2b1f-2985-49fa-8d27-3dde654ef4c1}</Project>
+      <Name>Kata.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
