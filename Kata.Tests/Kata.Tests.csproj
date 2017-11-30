@@ -56,10 +56,6 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Kata.Domain\Kata.Domain.csproj">
-      <Project>{6beb2b1f-2985-49fa-8d27-3dde654ef4c1}</Project>
-      <Name>Kata.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Kata.Prod\Kata.Prod.csproj">
       <Project>{f162f971-eb89-4f00-ba9a-6b0b18aff52c}</Project>
       <Name>Kata.Prod</Name>

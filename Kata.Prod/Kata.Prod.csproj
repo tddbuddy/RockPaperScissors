@@ -48,11 +48,5 @@
     <Compile Include="GameEngine.cs" />
     <Compile Include="Moves\Rock.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Kata.Domain\Kata.Domain.csproj">
-      <Project>{6beb2b1f-2985-49fa-8d27-3dde654ef4c1}</Project>
-      <Name>Kata.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
